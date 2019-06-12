@@ -1,0 +1,30 @@
+header {
+    height: 80px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+
+        &__item {
+            &:hover{
+                a{
+                    color: #39b54a;
+                }
+            }
+            a {
+                display: block;
+                padding: 10px;
+                color: #6c6c6c;
+                font-size: 10px;
+
+            }
+        }
+
+    }
+}

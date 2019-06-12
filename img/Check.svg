@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Icons/Check</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9.75600002,2.14333332 C9.66392755,2.04910031 9.53774675,1.9959753 9.40600002,1.9959753 C9.27425329,1.9959753 9.14807249,2.04910031 9.05600002,2.14333332 L4.12266666,7.08666668 L1.17066665,4.12666666 C1.04619424,3.99595164 0.860571153,3.94311452 0.685919624,3.98868471 C0.511268095,4.03425491 0.375123422,4.17104789 0.330383433,4.34591393 C0.285643445,4.52077998 0.339361781,4.70614996 0.470666648,4.83 L3.77266666,8.14000001 C3.86501077,8.23372835 3.99108994,8.28650231 4.12266666,8.28650231 C4.25424339,8.28650231 4.38032256,8.23372835 4.47266666,8.14000001 L9.75600002,2.84333332 C9.84898327,2.75059121 9.90124104,2.6246611 9.90124104,2.49333332 C9.90124104,2.36200555 9.84898327,2.23607543 9.75600002,2.14333332 L9.75600002,2.14333332 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="fields/radiobutton" transform="translate(-5.000000, -7.000000)">
+            <g id="Icons/Check" transform="translate(5.000000, 5.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g fill-rule="nonzero"></g>
+                <g id="Color/black" mask="url(#mask-2)" fill="#292929" fill-rule="evenodd">
+                    <rect id="Rectangle" x="0" y="0" width="10" height="10"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

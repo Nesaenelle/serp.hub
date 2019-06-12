@@ -1,0 +1,153 @@
+.modal {
+    &[data-modal-id="modal-thanks"] {
+        .modal-body {
+            width: 100%;
+            max-width: 508px;
+            height: 205px;
+            padding: 55px 60px;
+            @media screen and (max-width: 768px) {
+                height: 190px;
+                br { 
+                    display: none;
+                }
+            }
+            @media screen and (max-width: 480px) {
+                padding: 55px 30px;
+            }
+
+        }
+        .modal-title {
+            margin-bottom: 0px;
+        }
+    }
+
+    &[data-modal-id="modal-application"] {
+        .modal-body {
+            width: 100%;
+            max-width: 508px;
+            height: 400px;
+        }
+
+
+        .contact-form {
+            padding: 58px 69px;
+            @media screen and (max-width: 480px) {
+                padding: 55px 30px;
+            }
+
+            .input+.input {
+                margin-top: 11px;
+            }
+
+            input,
+            textarea {
+                padding: 18px 28px;
+                font-size: 14px;
+                border-color: #c6c6c6;
+
+            }
+
+            &__inputs {
+                width: 100%;
+            }
+
+            .btn {
+                padding: 20px 20px 18px;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &.opened {
+        .modal-body {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &-close {
+        position: absolute;
+        right: 17px;
+        top: 15px;
+        font-size: 19px;
+        cursor: pointer;
+
+        svg {
+            width: 14px;
+            height: 14px;
+            display: block;
+        }
+    }
+
+    &-overlay {
+        transition: 0.2s;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+
+        &.opened {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.opened {
+        .modal-body {
+            display: block;
+        }
+    }
+
+    &-body {
+        transition: 0.2s;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 999;
+        border-radius: 15px;
+        box-shadow: 0 0 32px -22px #000;
+    }
+
+    &-title {
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        font-size: 36px;
+        letter-spacing: 0.1px;
+        text-transform: uppercase;
+        padding: 0;
+        margin-bottom: 24px;
+        font-family: 'circe';
+
+        @media screen and (max-width: 768px) {
+            font-size: 28px;
+        }
+
+        @media screen and (max-width: 375px) {
+            font-size: 24px;
+        }
+
+        &:after {
+            content: none;
+        }
+
+    }
+
+    &-text {
+        font-size: 16px;
+        text-align: center;
+        font-family: 'circe';
+    }
+}
