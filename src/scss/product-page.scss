@@ -1,0 +1,246 @@
+.offers-page {
+    .video {
+        width: 926px;
+        height: 521px;
+    }
+
+    .net {
+        font-family: Montserrat;
+        font-size: 14px;
+        color: #292929;
+    }
+
+
+    .ye-line {
+        width: 405px;
+        height: 4px;
+        background-color: #ffcc2e;
+    }
+
+    .main-descr {
+        display: flex;
+        justify-content: space-between;
+
+        &__descr {
+            font-family: Open Sans;
+            font-size: 14px;
+            color: #4a4a4a;
+            width: 926px;
+            margin-top: 10px;
+
+        }
+
+        &__price {
+            width: 544px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        &__title-left {}
+
+        &__title-right {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+        }
+    }
+
+    .price-tag {
+        width: 926px;
+        height: 416px;
+        border-radius: 8px;
+        background-color: #ffcc2e;
+        padding: 30px;
+
+        &__wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        &__old-price {
+            font-family: Montserrat;
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        &__old-price-text {
+            font-family: Montserrat;
+            font-size: 10px;
+            color: #ffffff;
+
+        }
+
+
+
+        &__btn {
+            border: solid 2px #39b54a;
+            width: 170px;
+            height: 50px;
+            border-radius: 25.5px;
+            background-color: #39b54a;
+            color: #fff;
+            letter-spacing: 1px;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: bold;
+            margin: auto;
+            display: block;
+
+            &:hover {
+                background: #ffcc2e;
+                color: #000;
+            }
+        }
+
+        &__title {
+            font-family: Montserrat;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #292929;
+            text-align: center;
+        }
+
+        &__sm-title {
+            font-family: Open Sans;
+            font-size: 12px;
+            color: #292929;
+            text-align: center;
+        }
+
+        &__big-title {
+            font-family: Montserrat;
+            font-size: 40px;
+            font-weight: 600;
+            color: #292929;
+            text-align: center;
+        }
+
+        &__black-line {
+            width: 716px;
+            height: 1px;
+            background-color: #292929;
+            margin: auto;
+
+
+        }
+
+        ul {
+            width: 50%;
+            margin: auto;
+
+            li {
+
+                font-family: Open Sans;
+                font-size: 14px;
+                color: #292929;
+                margin-top: 10px;
+            }
+        }
+
+    }
+
+    .price-tag-small {
+        width: 300px;
+        height: 517px;
+        border-radius: 8px;
+        background-color: #ffcc2e;
+        padding: 30px;
+
+        &__wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        &__old-price {
+            font-family: Montserrat;
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        &__old-price-text {
+            font-family: Montserrat;
+            font-size: 10px;
+            color: #ffffff;
+
+        }
+
+
+
+        &__btn {
+            border: solid 2px #39b54a;
+            width: 170px;
+            height: 50px;
+            border-radius: 25.5px;
+            background-color: #39b54a;
+            color: #fff;
+            letter-spacing: 1px;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: bold;
+            margin: auto;
+            display: block;
+
+            &:hover {
+                background: #ffcc2e;
+                color: #000;
+            }
+        }
+
+        &__title {
+            font-family: Montserrat;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #292929;
+            text-align: center;
+        }
+
+        &__sm-title {
+            font-family: Open Sans;
+            font-size: 12px;
+            color: #292929;
+            text-align: center;
+        }
+
+        &__big-title {
+            font-family: Montserrat;
+            font-size: 40px;
+            font-weight: 600;
+            color: #292929;
+            text-align: center;
+        }
+
+        &__black-line {
+            width: 232px;
+            height: 1px;
+            background-color: #292929;
+            margin: auto;
+
+
+        }
+
+        ul {
+            width: 90%;
+            margin: auto;
+
+            li {
+
+                font-family: Open Sans;
+                font-size: 12px;
+                color: #292929;
+                margin-top: 10px;
+            }
+        }
+
+    }
+
+}

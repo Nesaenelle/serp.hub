@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="8px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Icons/Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3.66947367,11.851579 C3.47730604,12.0378397 3.17195709,12.0378397 2.97978946,11.851579 C2.88815301,11.762404 2.83646013,11.6399701 2.83646013,11.5121053 C2.83646013,11.3842405 2.88815301,11.2618066 2.97978946,11.1726316 L8.1691579,6.0631579 L2.98136841,1.1305263 C2.89007551,1.04181089 2.83856536,0.919929696 2.83856536,0.792631557 C2.83856536,0.665333418 2.89007551,0.54345222 2.98136841,0.454736819 C3.17222608,0.265270024 3.48019495,0.265270024 3.67105262,0.454736819 L9.46957896,6.0631579 L3.66947367,11.851579 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="button/text+rigth-icon" transform="translate(-258.000000, -19.000000)">
+            <g id="Icons/Arrow" transform="translate(264.000000, 23.000000) rotate(-270.000000) translate(-264.000000, -23.000000) translate(258.000000, 17.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g fill-rule="nonzero"></g>
+                <g id="Color/black" mask="url(#mask-2)" fill="#292929" fill-rule="evenodd">
+                    <rect id="Rectangle" x="0" y="0" width="12" height="12"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

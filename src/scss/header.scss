@@ -1,0 +1,39 @@
+header {
+    height: 80px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .btn {}
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+
+        &__item {
+
+            &:hover,
+            &.active {
+                a {
+                    color: #39b54a; 
+                    text-shadow: 0 0 1px #39b54a;
+                }
+            }
+
+            a {
+                text-transform: uppercase;
+                display: block;
+                padding: 10px 25px;
+                color: #6c6c6c;
+                font-size: 12px;
+                letter-spacing: 2px;
+
+            }
+        }
+
+    }
+}
