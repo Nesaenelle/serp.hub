@@ -39,6 +39,16 @@
         }
     }
 
+    &--transparent {
+        background-color: transparent;
+        // color: #39b54a;
+        color: #000;
+        &:hover {
+            background-color: #39b54a;
+            color: #fff;
+        }
+    }
+
 
     &:active {
         transform: translateY(1px);

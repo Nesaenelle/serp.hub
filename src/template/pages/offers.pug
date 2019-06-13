@@ -1,141 +1,127 @@
-doctype html
-head
-  meta(charset='UTF-8')
-  title serp.hub
-  meta(name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no')
-  meta(http-equiv='X-UA-Compatible' content='IE=Edge')
-  link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' rel='stylesheet')
-  link(href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap' rel='stylesheet')
+extends ../layout.pug
+include ../mixins/pandas-list-item.pug
 
-body(class="offers-page")
-    include ../parts/header.pug
-    main
-        .container
-            div
-                .main-descr
-                    .main-descr__title-left
-                        h2 FEATURED OFFER
-                        div
-                            h1 SOCIAL PANDAS
-                            .ye-line
-                            .net socialpandas.net
-                    .main-descr__title-right
-                        .rating
-                            img(src='img/stargreen.svg' alt='')
-                            img(src='img/stargreen.svg' alt='')
-                            img(src='img/stargreen.svg' alt='')
-                            img(src='img/stargreen.svg' alt='')
-                            img(src='img/star.svg' alt='')
-                        .old-price__reviews 999 reviews
-                        .action-time
-                            img(src='img/oval.svg' alt='')
-                            |  99 days 30 hours 59 minures
-                .main-descr
+block content
+    .container
+        div
+            .main-descr
+                .main-descr__title-left
+                    h2 FEATURED OFFER
                     div
-                      .main-descr__descr
-                        | I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. I&rsquo;m the best thing that ever happened to placeholder text.
-                      .main-descr__descr
-                        | Lorem Ipsum is unattractive, both inside and out. I fully understand why it&rsquo;s former users left it for something else. They made a good decision. An &lsquo;extremely credible source&rsquo; has called my office and told me that Barack Obama&rsquo;s placeholder text is a fraud. My placeholder text, I think, is going to end up being very good with women.
-                      .main-descr__descr
-                        | I don't think anybody knows it was Russia that wrote Lorem Ipsum, but I don't know, maybe it was. It could be Russia, but it could also be China. It could also be lots of other people. It also could be some wordsmith sitting on their bed that weights 400 pounds. Ok? Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't. I think my strongest asset maybe by far is my temperament. I have a placeholding temperament.
-                        | Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. I think the only card she has is the Lorem card. That other text? Sadly, it&rsquo;s no longer a 10..
-                    .main-descr__price
-                        .price $99
-                        div
-                            .old-price__text old price
-                            .old-price $149
+                        h1 SOCIAL PANDAS
+                        .ye-line
+                        .net socialpandas.net
+                .main-descr__title-right
+                    include ../parts/rating.pug
+                    a(href="offers.html#feedback" class="old-price__reviews") 999 reviews
+                    include ../parts/timer.pug
+            .main-descr
+                div
+                  .main-descr__descr
+                    | I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. I&rsquo;m the best thing that ever happened to placeholder text.
+                  .main-descr__descr
+                    | Lorem Ipsum is unattractive, both inside and out. I fully understand why it&rsquo;s former users left it for something else. They made a good decision. An &lsquo;extremely credible source&rsquo; has called my office and told me that Barack Obama&rsquo;s placeholder text is a fraud. My placeholder text, I think, is going to end up being very good with women.
+                  .main-descr__descr
+                    | I don't think anybody knows it was Russia that wrote Lorem Ipsum, but I don't know, maybe it was. It could be Russia, but it could also be China. It could also be lots of other people. It also could be some wordsmith sitting on their bed that weights 400 pounds. Ok? Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't. I think my strongest asset maybe by far is my temperament. I have a placeholding temperament.
+                    | Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. I think the only card she has is the Lorem card. That other text? Sadly, it&rsquo;s no longer a 10..
+                .main-descr__price
+                    .price $99
+                    div
+                        .old-price__text old price
+                        .old-price $149
+                    a(href="offer-cart.html")
                         button.btn.btn--green Buy Now
-            .galary
-                iframe.video(src='https://www.youtube.com/embed/pat2c33sbog' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
-            h2 SERP.FARM OFFER
-            .price-tag
-                .price-tag__title Social Pandas
-                .price-tag__sm-title One time purchase of
-                .price-tag__big-title promo-code
-                .price-tag__black-line
-                ul
-                    li &bull; LIVE Chat Support &amp; Skype Support (Fluent English Speaking)
-                    li &bull; Our Clients are Famous Instagrammers, Youtubers, Businesses &amp; Musicians
-                    li &bull; 100% Money Back Guarantee (Funds In Balance)
-                    li &bull; Offices Located in LA, Dubai &amp; London
-                button.price-tag__btn Use Promo code
-            h2 SERP.FARM OFFER
-            .price-tag
-                .price-tag__title Social Pandas
-                .price-tag__sm-title One time purchase of
-                .price-tag__wrap
-                    .price-tag__big-title $99
-                div
-                  .price-tag__old-price-text old price
-                  .price-tag__old-price $149
-                .price-tag__black-line
-                ul
-                    li &bull; LIVE Chat Support &amp; Skype Support (Fluent English Speaking)
-                    li &bull; Our Clients are Famous Instagrammers, Youtubers, Businesses &amp; Musicians
-                    li &bull; 100% Money Back Guarantee (Funds In Balance)
-                    li &bull; Offices Located in LA, Dubai &amp; London
-                button.price-tag__btn Buy Now
-            h2 SERP.FARM OFFER
-            .price-tag-small
-                .price-tag-small__title Social Pandas
-                .price-tag-small__sm-title One time purchase of
-                .price-tag-small__wrap
-                div
-                  .price-tag-small__old-price-text old price
-                  .price-tag-small__old-price $149
-                .price-tag-small__big-title $99
-                .price-tag-small__black-line
-                ul
-                    li &bull; LIVE Chat Support &amp; Skype Support (Fluent English Speaking)
-                    li &bull; Our Clients are Famous Instagrammers, Youtubers, Businesses &amp; Musicians
-                    li &bull; 100% Money Back Guarantee (Funds In Balance)
-                    li &bull; Offices Located in LA, Dubai &amp; London
-                button.price-tag-small__btn Buy Now
-            h2 REVIEWS
+        .galary
+            iframe.video(src='https://www.youtube.com/embed/pat2c33sbog' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+        h2 SERP.FARM OFFER
+        .price-tag
+            .price-tag__title Social Pandas
+            .price-tag__sm-title One time purchase of
+            .price-tag__big-title promo-code
+            .price-tag__black-line
+            ul
+                li &bull; LIVE Chat Support &amp; Skype Support (Fluent English Speaking)
+                li &bull; Our Clients are Famous Instagrammers, Youtubers, Businesses &amp; Musicians
+                li &bull; 100% Money Back Guarantee (Funds In Balance)
+                li &bull; Offices Located in LA, Dubai &amp; London
+            button.price-tag__btn Use Promo code
+        h2 SERP.FARM OFFER
+        .price-tag
+            .price-tag__title Social Pandas
+            .price-tag__sm-title One time purchase of
+            .price-tag__wrap
+                .price-tag__big-title $99
             div
+              .price-tag__old-price-text old price
+              .price-tag__old-price $149
+            .price-tag__black-line
+            ul
+                li &bull; LIVE Chat Support &amp; Skype Support (Fluent English Speaking)
+                li &bull; Our Clients are Famous Instagrammers, Youtubers, Businesses &amp; Musicians
+                li &bull; 100% Money Back Guarantee (Funds In Balance)
+                li &bull; Offices Located in LA, Dubai &amp; London
+            button.price-tag__btn Buy Now
+        h2 SERP.FARM OFFER
+        .price-tag-small
+            .price-tag-small__title Social Pandas
+            .price-tag-small__sm-title One time purchase of
+            .price-tag-small__wrap
+            div
+              .price-tag-small__old-price-text old price
+              .price-tag-small__old-price $149
+            .price-tag-small__big-title $99
+            .price-tag-small__black-line
+            ul
+                li &bull; LIVE Chat Support &amp; Skype Support (Fluent English Speaking)
+                li &bull; Our Clients are Famous Instagrammers, Youtubers, Businesses &amp; Musicians
+                li &bull; 100% Money Back Guarantee (Funds In Balance)
+                li &bull; Offices Located in LA, Dubai &amp; London
+            button.price-tag-small__btn Buy Now
+        h2 REVIEWS
+        div
+            div
+                | Your name 
+                input(type='text')
+            div
+            div Please rate this app
+            .rating
+                i
+        div#feedback
+            textarea(name='' id='' cols='30' rows='10')
+            button Send feedback
+        div
+            div
+                div N&uacute;ria Moura
                 div
-                    | Your name 
+                  | User rating 
+                  i
+                div May, 10, 2019
+                div
+                  | I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. I&rsquo;m the best thing that ever happened to placeholder text.
+            div
+                div Hugo Saavedra
+                div
+                  | User rating 
+                  i
+                div May, 4, 2019
+                div
+                  | Lorem Ipsum is unattractive, both inside and out. I fully understand why it&rsquo;s former users left it for something else. They made a good decision. An &lsquo;extremely credible source&rsquo; has called my office and told me that Barack Obama&rsquo;s placeholder text is a fraud. My placeholder text, I think, is going to end up being very good with women.
+            div
+                div Veerle de Bree
+                div
+                  | User rating 
+                  i
+                div May, 1, 2019
+                div
+                  | I don't think anybody knows it was Russia that wrote Lorem Ipsum, but I don't know, maybe it was. It could be Russia, but it could also be China. It could also be lots of other people. It also could be some wordsmith sitting on their bed that weights 400 pounds. Ok? Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't. I think my strongest asset maybe by far is my temperament. I have a placeholding temperament.
+            div
+                | More reviews 
+                i
+        .prefooter
+            .prefooterbg
+                div You never miss a our offer &amp; deals
+                div
+                    | All our deals are time-sensitive! Make sure you don't miss any of our awesome limited-time offers.
+                form(action='')
                     input(type='text')
-                div
-                div Please rate this app
-                .rating
-                    i
-            div
-                textarea(name='' id='' cols='30' rows='10')
-                button Send feedback
-            div
-                div
-                    div N&uacute;ria Moura
-                    div
-                      | User rating 
-                      i
-                    div May, 10, 2019
-                    div
-                      | I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. I&rsquo;m the best thing that ever happened to placeholder text.
-                div
-                    div Hugo Saavedra
-                    div
-                      | User rating 
-                      i
-                    div May, 4, 2019
-                    div
-                      | Lorem Ipsum is unattractive, both inside and out. I fully understand why it&rsquo;s former users left it for something else. They made a good decision. An &lsquo;extremely credible source&rsquo; has called my office and told me that Barack Obama&rsquo;s placeholder text is a fraud. My placeholder text, I think, is going to end up being very good with women.
-                div
-                    div Veerle de Bree
-                    div
-                      | User rating 
-                      i
-                    div May, 1, 2019
-                    div
-                      | I don't think anybody knows it was Russia that wrote Lorem Ipsum, but I don't know, maybe it was. It could be Russia, but it could also be China. It could also be lots of other people. It also could be some wordsmith sitting on their bed that weights 400 pounds. Ok? Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't. I think my strongest asset maybe by far is my temperament. I have a placeholding temperament.
-                div
-                    | More reviews 
-                    i
-            .prefooter
-                .prefooterbg
-                    div You never miss a our offer &amp; deals
-                    div
-                        | All our deals are time-sensitive! Make sure you don't miss any of our awesome limited-time offers.
-                    form(action='')
-                        input(type='text')
-                        button Subscible
+                    button Subscible

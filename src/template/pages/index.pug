@@ -1,117 +1,47 @@
-doctype html
-head
-meta(charset='UTF-8')
-title serp.hub
-// Fix for iOS Safari zooming bug
-meta(name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no')
-meta(http-equiv='X-UA-Compatible' content='IE=Edge')
-link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' rel='stylesheet')
-link(href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap' rel='stylesheet')
-body(class="home-page")
-	include ../parts/header.pug
-	main
-		.container
-			.top-block
-				.main_pandas
-					h2 FEATURED OFFER
-					.action-time
-						img(src='img/oval.svg' alt='')
-						|99 days 30 hours 59 minures
-					h1 SOCIAL PANDAS
-					.main_pandas__discription | Social Pandas is the MOST popular service for a reason, clients continue to see INSANE results with their Social Media goals.
-					.main_pandas__price
+extends ../layout.pug
+include ../mixins/pandas-list-item.pug
+
+block content
+	.container
+		.top-block
+			.main_pandas
+				h2 FEATURED OFFER
+				include ../parts/timer.pug
+				h1 SOCIAL PANDAS
+				.main_pandas__discription  Social Pandas is the MOST popular service for a reason, clients continue to see INSANE results with their Social Media goals.
+				.main_pandas__price
 					div
 						.price $99 
-						.rating
-						img(src='img/stargreen.svg' alt='')
-						img(src='img/stargreen.svg' alt='')
-						img(src='img/stargreen.svg' alt='')
-						img(src='img/stargreen.svg' alt='')
-						img(src='img/star.svg' alt='')
+						include ../parts/rating.pug
 					div
 						.old-price__text old price
 						.old-price $149
-						.old-price__reviews 999 reviews
+						a(href="offers.html#feedback" class="old-price__reviews") 999 reviews
+				a(href="offers.html")
 					button.btn.btn--green Learn More
-				img.right-img(src='img/telephone.jpg' alt='')
-		.slider__bg
-			.container
-				.slider__title RECOMENDED SERVICES
-				.main-slider
-					each val in []
-						.pandas-list__item
-							.action-time
-								img(src='img/oval.svg' alt='')
-								|99 days 30 hours 59 minures
-							.pandas-list__item--img
-								img(src='img/pandas.png' alt='')
-							.pandas-list__item--title Social Pandas
-							.pandas-list__item--label new
-							.pandas-list__item--descr
-							| Social Pandas is the MOST popular service for a reason, clients continue to see INSANE results with their Social Media goals.
-							.pandas-list__item--bottom
-							div
-								.old-price__text old price
-								.old-price $149
-								.price $99
-							div
-								.rating
-								img(src='img/stargreen.svg' alt='')
-								img(src='img/stargreen.svg' alt='')
-								img(src='img/stargreen.svg' alt='')
-								img(src='img/stargreen.svg' alt='')
-								img(src='img/star.svg' alt='')
-								.old-price__reviews 999 reviews
-								button.btn.btn--green Learn More
+			img.right-img(src='img/telephone.jpg' alt='')
+	.slider__bg
 		.container
-			h2 CURRENT OFFERS
-			.panel
-				.panel--label FILTER 
-				.dropdown
-					.dropdown__value ENDING SOON
-				.input
-					input(type='text' placeholder='Search plugins, sale or tools')
-					img(src='' alt='')
-			.pandas-list
-				.pandas-list__item
-					.action-time
-					img(src='img/oval.svg' alt='')
-					|	99 days 30 hours 59 minures
-					.pandas-list__item--img
-					img(src='img/pandas.png' alt='')
-					.pandas-list__item--title Social Pandas
-					.pandas-list__item--label new
-					.pandas-list__item--descr
-					| Social Pandas is the MOST popular service for a reason, clients continue to see INSANE results with their Social Media goals.
-					.pandas-list__item--bottom
-					div
-						.old-price__text old price
-						.old-price $149
-						.price $99
-					div
-						.rating
-						img(src='img/stargreen.svg' alt='')
-						img(src='img/stargreen.svg' alt='')
-						img(src='img/stargreen.svg' alt='')
-						img(src='img/stargreen.svg' alt='')
-						img(src='img/star.svg' alt='')
-						.old-price__reviews 999 reviews
-						button.btn.btn--green Learn More
-			.pagination
-				i
-				div 1
-				div 2
-				div 3
-				div ...
-				div 4
-				i
-	include ../parts/footer.pug
+			.slider__title RECOMENDED SERVICES
+			.main-slider
+				each val in [1,2,3,4,5,6]
+					+pandas-list-item(val)
+	.container
+		h2.current-offers-title CURRENT OFFERS
+		.panel
+			.panel--label FILTER 
+			.dropdown(data-dropdown)
+				.dropdown--value(data-dropdown-value) скоро заканчиваются
+				.dropdown__list
+					.dropdown__list--item(data-dropdown-item) новые
+					.dropdown__list--item(data-dropdown-item) скоро заканчиваются
+					.dropdown__list--item(data-dropdown-item) бесплатные
+			.input.search-input
+				input(type='text' placeholder='Search plugins, sale or tools')
+				img(src='img/search.svg' alt='')
+		.pandas-list
+			each val in [1,2,3,4,5,6]
+				+pandas-list-item(val)
+		include ../parts/pagination.pug
 
-
-//- script(src='js/jquery-3.3.1.min.js')
-//- script(src='js/slick.min.js')
-//- script(src='js/jquery.cloud9carousel.js')
-//- script(src='js/main.js')
-// <script src="src/menu.js"></script>
-// <script src="src/modal.js"></script>
-// <script src="src/animate.js"></script>
+	include ../parts/bottom-form.pug

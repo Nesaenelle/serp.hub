@@ -1,0 +1,24 @@
+mixin pandas-list-item(index)
+	.pandas-list__item
+		include ../parts/timer.pug
+
+		.pandas-list__item--img
+			img(src='img/pandas.png' alt='')
+		.pandas-list__item--body
+			.pandas-list__item--title Social Pandas
+				if (index == '1')
+					.pandas-list__item--label new
+			.pandas-list__item--descr Social Pandas is the MOST popular service for a reason, clients continue to see INSANE results with their Social Media goals.
+			.pandas-list__item--bottom
+				if (index !== 4)
+					div
+						.old-price__text old price
+						.old-price $149
+						.price $99
+				else
+					.pandas-list__item--free Free
+				div
+					include ../parts/rating.pug
+					a(href="offers.html#feedback" class="old-price__reviews") 999 reviews
+					a(href="offers.html")
+						button.btn.btn--green.btn--transparent Learn More

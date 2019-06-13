@@ -1,75 +1,41 @@
 .modal {
-    &[data-modal-id="modal-thanks"] {
-        .modal-body {
-            width: 100%;
-            max-width: 508px;
-            height: 205px;
-            padding: 55px 60px;
-            @media screen and (max-width: 768px) {
-                height: 190px;
-                br { 
-                    display: none;
-                }
-            }
-            @media screen and (max-width: 480px) {
-                padding: 55px 30px;
-            }
 
-        }
-        .modal-title {
-            margin-bottom: 0px;
-        }
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
 
-    &[data-modal-id="modal-application"] {
-        .modal-body {
-            width: 100%;
-            max-width: 508px;
-            height: 400px;
-        }
-
-
-        .contact-form {
-            padding: 58px 69px;
-            @media screen and (max-width: 480px) {
-                padding: 55px 30px;
-            }
-
-            .input+.input {
-                margin-top: 11px;
-            }
-
-            input,
-            textarea {
-                padding: 18px 28px;
-                font-size: 14px;
-                border-color: #c6c6c6;
-
-            }
-
-            &__inputs {
-                width: 100%;
-            }
-
+    &[data-modal-id="thanks"] {
+        .modal--body {
+            width: 613px;
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             .btn {
-                padding: 20px 20px 18px;
-                font-size: 14px;
-                text-transform: uppercase;
+                margin-top: 30px;
+                width: 247px;
             }
         }
     }
 
-    &.opened {
-        .modal-body {
-            opacity: 1;
-            visibility: visible;
-        }
+    &.active {
+        opacity: 1;
+        visibility: visible;
     }
 
-    &-close {
+    &--close {
         position: absolute;
-        right: 17px;
-        top: 15px;
+        right: -20px;
+        top: -25px;
         font-size: 19px;
         cursor: pointer;
 
@@ -80,7 +46,7 @@
         }
     }
 
-    &-overlay {
+    &--overlay {
         transition: 0.2s;
         position: fixed;
         top: 0;
@@ -92,7 +58,7 @@
         opacity: 0;
         visibility: hidden;
 
-        &.opened {
+        &.active {
             opacity: 1;
             visibility: visible;
         }
@@ -104,50 +70,44 @@
         }
     }
 
-    &-body {
+    &--body {
+        position: relative;
         transition: 0.2s;
-        background: #fff;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 999;
-        border-radius: 15px;
-        box-shadow: 0 0 32px -22px #000;
+        background: #ffcc2e;
+        border-radius: 4px;
+        box-shadow: 0 0 40px -20px #000;
     }
 
-    &-title {
-        font-weight: 600;
-        width: 100%;
-        text-align: center;
+    &--title {
+        font-family: Montserrat;
         font-size: 36px;
-        letter-spacing: 0.1px;
+        font-weight: bold;
+        line-height: 1.11;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #292929;
         text-transform: uppercase;
-        padding: 0;
-        margin-bottom: 24px;
-        font-family: 'circe';
-
-        @media screen and (max-width: 768px) {
-            font-size: 28px;
-        }
-
-        @media screen and (max-width: 375px) {
-            font-size: 24px;
-        }
-
-        &:after {
-            content: none;
-        }
 
     }
 
-    &-text {
-        font-size: 16px;
+    &--text {
+        line-height: 1.7em;
+        margin-top: 15px;
+        font-family: Open Sans;
+        font-size: 14px;
         text-align: center;
-        font-family: 'circe';
+        b {
+            display: block;
+        }
+    }
+
+    &--link {
+        .btn.btn--green {
+            &:hover {
+                background: darken($c-green, 10%);
+                color: #fff;
+                border: 2px solid darken($c-green, 10%);
+            }
+        }
     }
 }

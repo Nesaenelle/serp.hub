@@ -1,9 +1,10 @@
 header
-    .container
-        a(href="/")
-            img.logo(src='img/logo.png' alt='')
-        ul.menu
-            each val in [{name: 'Product', url: ''}, {name: 'Blog', url: ''}, {name: 'Support', url: ''}, {name: 'Faq', url: ''}, {name: 'Offers', url: 'offers'}, {name: 'Contact', url: ''}]
-                li.menu__item(class=((val.url == htmlWebpackPlugin.options.page) ? 'active' : ''))
-                    a(href=((val.url ? (val.url + '.html') : '/')))= val.name
-        button.btn.btn--white SIGN IN / LOG IN
+	.container
+		a(href="/")
+			img.logo(src='img/logo.png' alt='')
+		ul.menu
+			each val in [{name: 'Product', url: ''}, {name: 'Blog', url: 'http://sfarm.blog/'}, {name: 'Support', url: ''}, {name: 'Faq', url: ''}, {name: 'Offers', url: 'offers.html'}, {name: 'Contact', url: 'http://serp.farm/contacts/'}]
+				li.menu__item(class=((val.name.toLowerCase() == htmlWebpackPlugin.options.page) ? 'active' : ''))
+					a(href=val.url)= val.name
+		a(href="auth.html")
+			button.btn.btn--white SIGN IN / LOG IN

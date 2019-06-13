@@ -13,9 +13,6 @@ module.exports = {
         filename: 'bundle.js',
         // publicPath: '/'
     },
-    stats: {
-
-    },
     module: {
         rules: [
             // Include pug-loader to process the pug files
@@ -61,16 +58,26 @@ module.exports = {
             template: 'src/template/pages/offers.pug',
             page: 'offers'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'offer-cart.html',
+            template: 'src/template/pages/offer-cart.pug',
+            page: 'offer-cart'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'auth.html',
+            template: 'src/template/pages/auth.pug',
+            page: 'auth'
+        }),
         new ExtractTextPlugin({ allChunks: true, filename: "styles.css" }),
         new CopyWebpackPlugin([
             { from: 'src/img', to: 'img' }
         ]),
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            "window.jQuery": "jquery'",
-            "window.$": "jquery"
-        })
+        // new webpack.ProvidePlugin({
+        //     $: "jquery",
+        //     jQuery: "jquery",
+        //     "window.jQuery": "jquery'",
+        //     "window.$": "jquery"
+        // })
     ],
 
     devtool: 'source-map',
