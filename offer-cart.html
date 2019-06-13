@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head><link href="styles.css" rel="stylesheet"></head>
+<meta charset="UTF-8">
+<title>serp.hub</title>
+<!-- Fix for iOS Safari zooming bug-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;display=swap" rel="stylesheet">
+<body class="home-page">
+<header>
+  <div class="container"><a href="/"><img class="logo" src="img/logo.png" alt=""></a>
+    <ul class="menu">
+      <li class="menu__item"><a href="">Product</a></li>
+      <li class="menu__item"><a href="http://sfarm.blog/">Blog</a></li>
+      <li class="menu__item"><a href="">Support</a></li>
+      <li class="menu__item"><a href="">Faq</a></li>
+      <li class="menu__item"><a href="offers.html">Offers</a></li>
+      <li class="menu__item"><a href="http://serp.farm/contacts/">Contact</a></li>
+    </ul><a href="auth.html">
+      <button class="btn btn--white">SIGN IN / LOG IN</button></a>
+  </div>
+</header>
+  <main class="offer-cart-page">
+    <div class="container">
+      <div class="title">Your buying offer</div>
+      <div>Product</div>
+      <div>Social Pandas</div>
+      <div>Оставьте свой email, и мы вышлем вам на почту промокод или ссылку для скачивания продукта</div>
+      <input type="email" placeholder="Email">
+      <div>Запомнить мою почту для следующих покупок на этом сайте</div>
+      <div>Нажмите кнопку Купить, ми мы вышлем на email ссылку/промокод, по которойвысожете купить данный продукт с индивидуальной скидкой</div>
+      <button class="btn btn--green btn--transparent">Buy Now</button>
+      <div>Нажимая кнопку, вы даете согласие на обработку ваших персональных данных владельцом данного сайта.</div>
+    </div>
+  </main>
+<footer>
+  <div class="container">
+    <div>&copy; 2018 SERP.farm All rights reserved</div>
+  </div>
+</footer>
+<div class="modal--overlay"></div>
+<div class="modal" data-modal-id="thanks">
+  <div class="modal--body">
+    <div class="modal--close" data-modal-close>X</div>
+    <div class="modal--title">thank you!</div>
+    <div class="modal--text">На вашу почту отправлено письмо с адреса:<b>offer@serp.farm</b>с ссылкой/промокодом по интересующему продукту.<br>Если вы не обнаружили письмо в папке Входящие, <br>возможно письмо пришло в папку СПАМ.</div><a class="modal--link" href="">
+      <button class="btn btn--green">Back on offer-page</button></a>
+  </div>
+</div>
+<script type="text/javascript" src="bundle.js"></script></body>

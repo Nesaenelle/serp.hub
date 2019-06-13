@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="UTF-8">
-  <title>serp.hub</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;display=swap" rel="stylesheet">
-<link href="styles.css" rel="stylesheet"></head>
-<body class="offers-page">
+<head><link href="styles.css" rel="stylesheet"></head>
+<meta charset="UTF-8">
+<title>serp.hub</title>
+<!-- Fix for iOS Safari zooming bug-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;display=swap" rel="stylesheet">
+<body class="home-page">
 <header>
   <div class="container"><a href="/"><img class="logo" src="img/logo.png" alt=""></a>
     <ul class="menu">
-      <li class="menu__item"><a href="/">Product</a></li>
-      <li class="menu__item"><a href="/">Blog</a></li>
-      <li class="menu__item"><a href="/">Support</a></li>
-      <li class="menu__item"><a href="/">Faq</a></li>
+      <li class="menu__item"><a href="">Product</a></li>
+      <li class="menu__item"><a href="http://sfarm.blog/">Blog</a></li>
+      <li class="menu__item"><a href="">Support</a></li>
+      <li class="menu__item"><a href="">Faq</a></li>
       <li class="menu__item active"><a href="offers.html">Offers</a></li>
-      <li class="menu__item"><a href="/">Contact</a></li>
-    </ul>
-    <button class="btn btn--white">SIGN IN / LOG IN</button>
+      <li class="menu__item"><a href="http://serp.farm/contacts/">Contact</a></li>
+    </ul><a href="auth.html">
+      <button class="btn btn--white">SIGN IN / LOG IN</button></a>
   </div>
 </header>
-  <main>
+  <main class="offers-page">
     <div class="container">
       <div>
         <div class="main-descr">
@@ -34,9 +34,8 @@
             </div>
           </div>
           <div class="main-descr__title-right">
-            <div class="rating"><img src="img/stargreen.svg" alt=""><img src="img/stargreen.svg" alt=""><img src="img/stargreen.svg" alt=""><img src="img/stargreen.svg" alt=""><img src="img/star.svg" alt=""></div>
-            <div class="old-price__reviews">999 reviews</div>
-            <div class="action-time"><img src="img/oval.svg" alt=""> 99 days 30 hours 59 minures</div>
+<div class="rating"><img src="img/stargreen.svg" alt=""><img src="img/stargreen.svg" alt=""><img src="img/stargreen.svg" alt=""><img src="img/stargreen.svg" alt=""><img src="img/star.svg" alt=""></div><a class="old-price__reviews" href="offers.html#feedback">999 reviews</a>
+<div class="action-time"><img src="img/oval.svg" alt=""><b>99 </b><span>days </span><b>30 </b><span>hours </span><b>59 </b><span>minutes</span></div>
           </div>
         </div>
         <div class="main-descr">
@@ -53,8 +52,8 @@
             <div>
               <div class="old-price__text">old price</div>
               <div class="old-price">$149</div>
-            </div>
-            <button class="btn btn--green">Buy Now</button>
+            </div><a href="offer-cart.html">
+              <button class="btn btn--green">Buy Now</button></a>
           </div>
         </div>
       </div>
@@ -123,7 +122,7 @@
         <div>Please rate this app</div>
         <div class="rating"><i></i></div>
       </div>
-      <div>
+      <div id="feedback">
         <textarea name="" id="" cols="30" rows="10"></textarea>
         <button>Send feedback</button>
       </div>
@@ -160,4 +159,18 @@
       </div>
     </div>
   </main>
+<footer>
+  <div class="container">
+    <div>&copy; 2018 SERP.farm All rights reserved</div>
+  </div>
+</footer>
+<div class="modal--overlay"></div>
+<div class="modal" data-modal-id="thanks">
+  <div class="modal--body">
+    <div class="modal--close" data-modal-close>X</div>
+    <div class="modal--title">thank you!</div>
+    <div class="modal--text">На вашу почту отправлено письмо с адреса:<b>offer@serp.farm</b>с ссылкой/промокодом по интересующему продукту.<br>Если вы не обнаружили письмо в папке Входящие, <br>возможно письмо пришло в папку СПАМ.</div><a class="modal--link" href="">
+      <button class="btn btn--green">Back on offer-page</button></a>
+  </div>
+</div>
 <script type="text/javascript" src="bundle.js"></script></body>
