@@ -12,13 +12,14 @@
     }
 
     .main-slider {
-        margin-top: 20px;
-        .slick-slide {  
+        margin-top: -40px;
+        // .slick-slide {  
 
-        }
+        // }
         .pandas-list__item {
-          
-
+            // margin: auto;
+            width: 100%;
+            // width: 400px;
         }
     }
 
@@ -291,6 +292,10 @@
                 font-weight: 600;
                 display: flex;
                 justify-content: space-between;
+
+                @media (max-width: 980px) { 
+                    font-size: 20px;
+                }
             }
 
             &--descr {
@@ -320,6 +325,9 @@
                 align-self: flex-end;
                 padding-left: 0!important;
                 padding-bottom: 4px;
+                @media (max-width: 980px) { 
+                    font-size: 32px;
+                }
             }
 
             &--bottom {
@@ -344,6 +352,7 @@
                 .price {
                     line-height: 1.1em;
                     margin-left: -3px;
+
                 }
 
                 &>div {

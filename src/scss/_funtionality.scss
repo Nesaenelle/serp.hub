@@ -1,0 +1,196 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Variables
+2.0 Cards
+3.0 Bullets
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+
+// Define number of slides
+$start: 1; // Always 1
+$end: 5; // Number of slides: 5 slides in this case
+
+/*--------------------------------------------------------------
+2.0 Cards
+--------------------------------------------------------------*/
+$normal-transition-time: 0.2s;
+$default-ease: ease;
+
+@mixin default-transition($param: all) {
+  transition: $param $normal-transition-time $default-ease;
+}
+
+
+.slider {
+
+  // .slider__item
+  &__item {
+    @include default-transition(all);
+
+    // Loop through .slider__item--(slide-number)
+    @for $slide from $start through $end {
+
+      // .slider__item--(slide-number)
+      &--#{$slide} {
+
+        // Within each .slider__item--(slide-number) loop through #slide-(number)
+        @for $i from $start through $end {
+
+          @if $i <= $slide - 3 {
+            // For the slides 3 or more positions on the right
+            // #slide-(number):checked ~ .slider__holder .slider__item--(slide-number)
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: -1;
+
+              opacity: 0;
+
+              transform: translateX(430px) scale(0.85);
+              @media (max-width: 1280px) {
+                transform: translateX(330px) scale(0.85);
+              }
+            }
+          }
+
+          @if $i == $slide - 2 {
+            // For the slide 2 positions on the right
+            // #slide-(number):checked ~ .slider__holder .slider__item--(slide-number)
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: 0;
+
+              transform: translateX(430px) scale(0.85);
+
+              @media (max-width: 1280px) {
+                transform: translateX(280px) scale(0.85);
+              }
+
+
+              @media (max-width: 980px) { 
+                transform: translateX(220px) scale(0.85);
+              }
+
+              @media (max-width: 768px) {
+                opacity: 0;
+              }
+            }
+          }
+
+          @if $i == $slide - 1 {
+            // For the slide 1 positions on the right
+            // #slide-(number):checked ~ .slider__holder .slider__item--(slide-number)
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: 1;
+
+              transform: translateX(260px) scale(0.95);
+
+              @media (max-width: 1280px) {
+                transform: translateX(140px) scale(0.95);
+              }
+
+              @media (max-width: 980px) { 
+                transform: translateX(120px) scale(0.90);
+              } 
+
+              @media (max-width: 768px) {
+                opacity: 0.6;
+              }
+            }
+          }
+
+          @if $i == $slide {
+            // For the slide 1 positions under the active one
+            // #slide-(number):checked ~ .slider__holder .slider__item--(slide-number)
+            #slide-#{$i}:checked ~ .slider__holder & {
+              position: relative;
+              z-index: 2;
+
+              transform: translate(0) scale(1);
+            }
+          }
+
+          @if $i == $slide + 1 {
+            // For the slide 1 positions on the left
+            // #slide-(number):checked ~ .slider__holder .slider__item--(slide-number)
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: 1;
+
+              transform: translateX(-260px) scale(0.95);
+              @media (max-width: 1280px) {
+                transform: translateX(-140px) scale(0.95);
+              }
+
+              @media (max-width: 980px) { 
+                transform: translateX(-120px) scale(0.90);
+              } 
+
+              @media (max-width: 768px) {
+                opacity: 0.6;
+              }
+            }
+          }
+
+          @if $i == $slide + 2 {
+            // For the slide 2 positions on the left
+            // #slide-(number):checked ~ .slider__holder .slider__item--(slide-number)
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: 0;
+
+              transform: translateX(-430px) scale(0.85);
+
+              @media (max-width: 1280px) {
+                transform: translateX(-280px) scale(0.85);
+              }
+
+              @media (max-width: 980px) { 
+                transform: translateX(-220px) scale(0.85);
+              }
+
+              @media (max-width: 768px) {
+                opacity: 0;
+              }
+            }
+          }
+
+          @if $i >= $slide + 3 {
+            // For the slide 3 positions or more on the left
+            // #slide-(number):checked ~ .slider__holder .slider__item--(slide-number)
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: -1;
+
+              opacity: 0;
+
+              transform: translateX(-430px) scale(0.85);
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+3.0 Bullets
+--------------------------------------------------------------*/
+
+.bullets {
+
+  // .bullets__item
+  &__item {
+    @include default-transition();
+
+    // Loops through all the bullet points
+    @for $bullet from $start through $end {
+      // .bullets__item--(bullet-number)
+      &--#{$bullet} {
+        // #slide-(number):checked ~ .bullets .bullets__item--(bullet-number)
+        #slide-#{$bullet}:checked ~ .bullets & {
+          background: #fff;
+        }
+      }
+    }
+  }
+}

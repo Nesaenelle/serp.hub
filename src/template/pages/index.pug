@@ -23,9 +23,13 @@ block content
 	.slider__bg
 		.container
 			.slider__title RECOMENDED SERVICES
-			.main-slider
-				each val in [1,2,3,4,5,6]
-					+pandas-list-item(val)
+			.main-slider.slider
+				each val in [1,2,3,4,5]
+					input(type="radio" class="slider__radio" name="slider" id="slide-" + val checked=(val === 3 ? true : false))
+				.slider__holder
+					each val in [1,2,3,4,5]
+						label.slider__item(for="slide-"+ val class="slider__item--" + val)
+							+pandas-list-item(val)
 	.container
 		h2.current-offers-title CURRENT OFFERS
 		.panel

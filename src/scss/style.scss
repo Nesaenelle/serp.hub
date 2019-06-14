@@ -10,6 +10,9 @@ $c-green: #39b54a;
 @import "product-page.scss";
 @import "slick.css";
 
+@import "_styling.scss";
+@import "_funtionality.scss";
+
 
 
 body {}
@@ -99,6 +102,9 @@ h2 {
     font-family: Montserrat;
     font-size: 40px;
     font-weight: 600;
+    @media (max-width: 980px) { 
+        font-size: 32px;
+    }
 }
 
 .old-price {
@@ -106,6 +112,9 @@ h2 {
     font-size: 24px;
     color: #d6d6d6;
     font-weight: 600;
+    @media (max-width: 980px) { 
+        font-size: 20px;
+    }
 
     &__text {
         font-family: Montserrat;

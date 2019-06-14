@@ -26,28 +26,6 @@ $(window).on('click', function(e) {
 
 });
 
-$('.main-slider').slick({
-  dots: false,
-  arrows: false,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 5,
-  centerMode: true,
-  centerPadding: '0px',
-  responsive: [
-    {
-      breakpoint: 1280,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    }
-   ]
-  // centerMode: true,
-  // variableWidth: true
-});
-
-
 
 $('.search-input').on('input', (e)=> {
 	let val = e.target.value;
@@ -76,10 +54,6 @@ function openModal(id) {
 $('[data-modal-button]').on('click', function(e) {
     e.stopPropagation();
     var id = $(this).attr('data-modal-button');
-    // $('.modal').removeClass('active');
-
-    // $('.modal--overlay').addClass('active');
-    // $('.modal').filter(`[data-modal-id=${id}]`).addClass('active');
     openModal(id);
 });
 

@@ -12,6 +12,9 @@ header {
     .menu {
         display: flex;
         justify-content: space-between;
+        @media (max-width: 980px) {
+            display: none;
+        }
 
         &__item {
 
@@ -30,6 +33,10 @@ header {
                 color: #6c6c6c;
                 font-size: 10px;
                 letter-spacing: 2px;
+
+                @media (max-width: 1280px) {
+                    padding: 10px 20px;
+                }
 
             }
         }
