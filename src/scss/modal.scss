@@ -13,7 +13,7 @@
     visibility: hidden;
     transition: 0.2s;
 
-    &[data-modal-id="thanks"] {
+    &[data-modal-id="thanks"] , &[data-modal-id="thanks-auth"], &[data-modal-id="restore"] {
         .modal--body {
             width: 613px;
             padding: 40px;
@@ -79,7 +79,7 @@
         transition: 0.2s;
         background: #ffcc2e;
         border-radius: 4px;
-        box-shadow: 0 0 40px -20px #000;
+        box-shadow: 0 0 40px -30px #000;
     }
 
     &--title {

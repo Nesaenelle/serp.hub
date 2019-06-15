@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;display=swap" rel="stylesheet">
-<body class="home-page">
+<body>
 <header>
   <div class="container"><a href="/"><img class="logo" src="img/logo.png" alt=""></a>
     <ul class="menu">
@@ -23,15 +23,67 @@
 </header>
   <main class="offer-cart-page">
     <div class="container">
-      <div class="title">Your buying offer</div>
-      <div>Product</div>
-      <div>Social Pandas</div>
-      <div>Оставьте свой email, и мы вышлем вам на почту промокод или ссылку для скачивания продукта</div>
-      <input type="email" placeholder="Email">
-      <div>Запомнить мою почту для следующих покупок на этом сайте</div>
-      <div>Нажмите кнопку Купить, ми мы вышлем на email ссылку/промокод, по которойвысожете купить данный продукт с индивидуальной скидкой</div>
-      <button class="btn btn--green btn--transparent">Buy Now</button>
-      <div>Нажимая кнопку, вы даете согласие на обработку ваших персональных данных владельцом данного сайта.</div>
+      <h2 class="title">Your buying offer</h2>
+      <div class="subtitle">Product</div>
+      <div class="offer"><a class="offer--name" href="offers.html"> Social Pandas</a>
+        <div class="offer--wrap">
+          <div class="price">$99</div>
+          <div>
+            <div class="old-price__text">You save</div>
+            <div class="old-price">$50</div>
+          </div>
+        </div>
+      </div>
+      <form class="payment form" novalidate data-modal-id="thanks"> 
+        <div class="payment__step active">
+          <div class="payment__step--number">
+            <svg class="step-icon">
+              <g id="button/first" stroke-width="1" fill-rule="evenodd">
+                <circle cx="25" cy="25" r="24"></circle>
+                <text font-size="24" font-weight="600">
+                  <tspan x="20" y="28">1</tspan>
+                </text>
+                <text font-size="10" font-weight="500">
+                  <tspan x="14" y="39">step</tspan>
+                </text>
+              </g>
+            </svg>
+          </div>
+          <div class="payment__step--content">
+            <div class="text">Оставьте свой email, и мы вышлем вам на почту промокод или ссылку для скачивания продукта</div>
+            <div class="input">
+              <input type="email" placeholder="Email" required>
+            </div>
+            <div class="remember"> 
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="checkbox--icon"></div>
+                <div class="checkbox--text">Запомнить мою почту для следующих покупок на этом сайте</div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="payment__step">
+          <div class="payment__step--number">
+            <svg class="step-icon">
+              <g id="button/first" stroke-width="1" fill-rule="evenodd">
+                <circle cx="25" cy="25" r="24"></circle>
+                <text font-size="24" font-weight="600">
+                  <tspan x="19" y="28">2</tspan>
+                </text>
+                <text font-size="10" font-weight="500">
+                  <tspan x="14" y="39">step</tspan>
+                </text>
+              </g>
+            </svg>
+          </div>
+          <div class="payment__step--content">
+            <div class="text">Нажмите кнопку Купить, ми мы вышлем на email ссылку/промокод, по которойвысожете купить данный продукт с индивидуальной скидкой</div>
+            <button class="btn btn--green btn--transparent" type="submit">Buy Now</button>
+            <div class="extra-text">Нажимая кнопку, вы даете согласие на обработку ваших персональных данных владельцом данного сайта.</div>
+          </div>
+        </div>
+      </form>
     </div>
   </main>
 <footer>
@@ -42,9 +94,26 @@
 <div class="modal--overlay"></div>
 <div class="modal" data-modal-id="thanks">
   <div class="modal--body">
-    <div class="modal--close" data-modal-close>X</div>
+    <div class="modal--close" data-modal-close></div>
     <div class="modal--title">thank you!</div>
     <div class="modal--text">На вашу почту отправлено письмо с адреса:<b>offer@serp.farm</b>с ссылкой/промокодом по интересующему продукту.<br>Если вы не обнаружили письмо в папке Входящие, <br>возможно письмо пришло в папку СПАМ.</div><a class="modal--link" href="">
+      <button class="btn btn--green">Back on offer-page</button></a>
+  </div>
+</div>
+<div class="modal--overlay"></div>
+<div class="modal" data-modal-id="thanks-auth">
+  <div class="modal--body">
+    <div class="modal--close" data-modal-close></div>
+    <div class="modal--title">thank you!</div>
+    <div class="modal--text">На вашу почту отправлено письмо с адреса:<b>offer@serp.farm</b>с вашими данными и паролем доступа на наш сайт.<br>Если вы не обнаружили письмо в папке Входящие, <br>возможно письмо пришло в папку СПАМ.</div><a class="modal--link" href="">
+      <button class="btn btn--green">Back on offer-page</button></a>
+  </div>
+</div>
+<div class="modal" data-modal-id="restore">
+  <div class="modal--body">
+    <div class="modal--close" data-modal-close></div>
+    <div class="modal--title">Restore account</div>
+    <div class="modal--text">На вашу почту отправлено письмо с адреса:<b>offer@serp.farm</b>с вашими данными и паролем доступа на наш сайт.<br>Если вы не обнаружили письмо в папке Входящие, <br>возможно письмо пришло в папку СПАМ.</div><a class="modal--link" href="">
       <button class="btn btn--green">Back on offer-page</button></a>
   </div>
 </div>

@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;display=swap" rel="stylesheet">
-<body class="home-page">
+<body>
 <header>
   <div class="container"><a href="/"><img class="logo" src="img/logo.png" alt=""></a>
     <ul class="menu">
@@ -24,14 +24,35 @@
   <main class="auth-page">
     <div class="container">
       <div class="tabs">
-        <div class="tabs--item">SIGN IN</div>
-        <div class="tabs--item">LOG IN</div>
+        <div class="tabs--item active" data-tab-id="1">SIGN UP</div>
+        <div class="tabs--item" data-tab-id="2">LOG IN</div>
       </div>
-      <div>Введите действующий свой email</div>
-      <input type="text">
-      <div>Мы вышлем на почту ваш пароль для доступа к своей учетной записи на нашем сайте. Регистрация вам даст возможность пользоваться специальными предложениями по нашим продуктам и продуктам наших партнеров.</div>
-      <div>Нажимая кнопку, вы даете согласие на обработку ваших персональных данных владельцом данного сайта.</div>
-      <button class="btn btn--green btn--transparent">Registered NOW</button>
+      <form class="form active" data-tab="1" data-modal-id="thanks-auth" novalidate>
+        <label>Введите действующий свой email</label>
+        <div class="input">
+          <input type="email" placeholder="Email" required>
+        </div>
+        <div class="text">Мы вышлем на почту ваш пароль для доступа к своей учетной записи на нашем сайте. <br>Регистрация вам даст возможность пользоваться специальными предложениями по нашим продуктам и продуктам наших партнеров.</div>
+        <div class="form--bottom">
+          <div class="extra-text">Нажимая кнопку, вы даете согласие на обработку ваших персональных данных владельцом данного сайта.</div>
+          <button class="btn btn--green btn--transparent" type="submit">Registered NOW</button>
+        </div>
+      </form>
+      <form class="form" data-tab="2" data-modal-id="restore" novalidate>
+        <label>Введите действующий свой email</label>
+        <div class="input">
+          <input type="email" placeholder="Email" required>
+        </div>
+        <label>Введите пароль</label>
+        <div class="input">
+          <input type="password" placeholder="password" required><img class="input--icon" src="img/Glasses.svg" alt="">
+          <div class="input--error">Вы ввели не верный пароль. Повторите снова или восстановите пароль</div>
+        </div>
+        <div class="form--bottom">
+          <div class="forgot" data-modal-button="restore">Forgot password</div>
+          <button class="btn btn--green btn--transparent" type="submit">Log in</button>
+        </div>
+      </form>
     </div>
   </main>
 <footer>
@@ -42,9 +63,26 @@
 <div class="modal--overlay"></div>
 <div class="modal" data-modal-id="thanks">
   <div class="modal--body">
-    <div class="modal--close" data-modal-close>X</div>
+    <div class="modal--close" data-modal-close></div>
     <div class="modal--title">thank you!</div>
     <div class="modal--text">На вашу почту отправлено письмо с адреса:<b>offer@serp.farm</b>с ссылкой/промокодом по интересующему продукту.<br>Если вы не обнаружили письмо в папке Входящие, <br>возможно письмо пришло в папку СПАМ.</div><a class="modal--link" href="">
+      <button class="btn btn--green">Back on offer-page</button></a>
+  </div>
+</div>
+<div class="modal--overlay"></div>
+<div class="modal" data-modal-id="thanks-auth">
+  <div class="modal--body">
+    <div class="modal--close" data-modal-close></div>
+    <div class="modal--title">thank you!</div>
+    <div class="modal--text">На вашу почту отправлено письмо с адреса:<b>offer@serp.farm</b>с вашими данными и паролем доступа на наш сайт.<br>Если вы не обнаружили письмо в папке Входящие, <br>возможно письмо пришло в папку СПАМ.</div><a class="modal--link" href="">
+      <button class="btn btn--green">Back on offer-page</button></a>
+  </div>
+</div>
+<div class="modal" data-modal-id="restore">
+  <div class="modal--body">
+    <div class="modal--close" data-modal-close></div>
+    <div class="modal--title">Restore account</div>
+    <div class="modal--text">На вашу почту отправлено письмо с адреса:<b>offer@serp.farm</b>с вашими данными и паролем доступа на наш сайт.<br>Если вы не обнаружили письмо в папке Входящие, <br>возможно письмо пришло в папку СПАМ.</div><a class="modal--link" href="">
       <button class="btn btn--green">Back on offer-page</button></a>
   </div>
 </div>

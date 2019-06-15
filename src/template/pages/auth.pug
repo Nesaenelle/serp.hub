@@ -3,13 +3,33 @@ extends ../layout.pug
 block content
 	.container
 		.tabs
-			.tabs--item SIGN IN
-			.tabs--item LOG IN
+			.tabs--item.active(data-tab-id="1") SIGN UP
+			.tabs--item(data-tab-id="2") LOG IN
 
-		div Введите действующий свой email
-		input(type="text")
-		div Мы вышлем на почту ваш пароль для доступа к своей учетной записи на нашем сайте. Регистрация вам даст возможность пользоваться специальными предложениями по нашим продуктам и продуктам наших партнеров.
+		form(class="form active" data-tab="1" data-modal-id="thanks-auth" novalidate)
+			label Введите действующий свой email
+			.input
+				input(type="email" placeholder="Email" required)
+			.text Мы вышлем на почту ваш пароль для доступа к своей учетной записи на нашем сайте. 
+				br
+				| Регистрация вам даст возможность пользоваться специальными предложениями по нашим продуктам и продуктам наших партнеров.
 
-		div Нажимая кнопку, вы даете согласие на обработку ваших персональных данных владельцом данного сайта.
+			.form--bottom
+				.extra-text Нажимая кнопку, вы даете согласие на обработку ваших персональных данных владельцом данного сайта.
 
-		button.btn.btn--green.btn--transparent Registered NOW
+				button.btn.btn--green.btn--transparent(type="submit") Registered NOW
+
+		form(class="form" data-tab="2" data-modal-id="restore" novalidate)
+			label Введите действующий свой email
+			.input
+				input(type="email" placeholder="Email" required)
+			label Введите пароль
+			.input
+				input(type="password" placeholder="password" required)
+				img(src="img/Glasses.svg", alt="" class="input--icon")
+				.input--error Вы ввели не верный пароль. Повторите снова или восстановите пароль
+
+			.form--bottom
+				.forgot(data-modal-button="restore") Forgot password
+
+				button.btn.btn--green.btn--transparent(type="submit") Log in

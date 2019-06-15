@@ -2,15 +2,46 @@ extends ../layout.pug
 
 block content
 	.container
-		.title Your buying offer
-		div Product
-		div Social Pandas
+		h2.title Your buying offer
+		.subtitle Product
+		.offer
+			a.offer--name(href="offers.html")  Social Pandas
+			.offer--wrap
+				.price $99
+				div
+					.old-price__text You save
+					.old-price $50
+		
+		form(class="payment form" novalidate data-modal-id="thanks") 
+			.payment__step.active
+				.payment__step--number
+					svg(class="step-icon")
+						g(id='button/first' stroke-width='1' fill-rule='evenodd')
+							circle(cx='25' cy='25' r='24')
+							text(font-size='24' font-weight='600' )
+								tspan(x='20' y='28') 1
+							text(font-size='10' font-weight='500' )
+								tspan(x='14' y='39') step
+				.payment__step--content
+					.text Оставьте свой email, и мы вышлем вам на почту промокод или ссылку для скачивания продукта
+					.input
+						input(type="email" placeholder="Email" required)
+					.remember 
+						label.checkbox
+							input(type="checkbox")
+							.checkbox--icon
+							.checkbox--text Запомнить мою почту для следующих покупок на этом сайте
+			.payment__step
+				.payment__step--number
+					svg(class="step-icon")
+						g(id='button/first' stroke-width='1' fill-rule='evenodd')
+							circle(cx='25' cy='25' r='24')
+							text(font-size='24' font-weight='600' )
+								tspan(x='19' y='28') 2
+							text(font-size='10' font-weight='500' )
+								tspan(x='14' y='39') step
+				.payment__step--content
+					.text Нажмите кнопку Купить, ми мы вышлем на email ссылку/промокод, по которойвысожете купить данный продукт с индивидуальной скидкой
 
-
-		div Оставьте свой email, и мы вышлем вам на почту промокод или ссылку для скачивания продукта
-		input(type="email" placeholder="Email")
-		div Запомнить мою почту для следующих покупок на этом сайте
-		div Нажмите кнопку Купить, ми мы вышлем на email ссылку/промокод, по которойвысожете купить данный продукт с индивидуальной скидкой
-
-		button.btn.btn--green.btn--transparent Buy Now
-		div Нажимая кнопку, вы даете согласие на обработку ваших персональных данных владельцом данного сайта.
+					button.btn.btn--green.btn--transparent(type="submit") Buy Now
+					.extra-text Нажимая кнопку, вы даете согласие на обработку ваших персональных данных владельцом данного сайта.

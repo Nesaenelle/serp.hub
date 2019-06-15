@@ -2,7 +2,7 @@
     padding-top: 95px;
 
     .bottom-form {
-    	margin-top: 80px;
+        margin-top: 80px;
     }
 
     .title {
@@ -14,10 +14,17 @@
 
     .container {
         padding-right: 160px;
+
+        @media (max-width: 1024px) {
+            padding-right: 40px;
+        }
     }
 
     .inner-container {
         width: 83%;
+        @media (max-width: 1024px) {
+        	width: 100%;
+        }
     }
 
     .lSSlideOuter {
@@ -38,17 +45,31 @@
         .lSAction {
             // position: relative;
             // z-index: 1000;
-            display: none;
+            // display: none;
         }
 
-        // .lSAction > a {
-        // 	top: auto;
-        // 	bottom: -80px;
-        // 	background: #fcc!important;
-        // 	z-index: 23;
-        // }
+        .lSAction>a {
+            background: url(../img/Arrow-2.svg) no-repeat;
+            background-position: center;
+
+            &.lSNext {
+                transform: rotate(180deg);
+            }
+
+            &.lSPrev {}
+
+            // 	top: auto;
+            // 	bottom: -80px;
+            // 	background: #fcc!important;
+            // 	z-index: 23;
+        }
+
         .lSPager.lSGallery {
             margin-top: 12px !important;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
 
             li {
                 height: 105px;
@@ -415,17 +436,31 @@
             display: flex;
             flex-wrap: wrap;
 
+            &--label {
+                background: #ffcc2e;
+                border-radius: 20px;
+                display: inline-block;
+                letter-spacing: 0px;
+                padding: 7px 38px 5px;
+                font-family: Montserrat;
+            }
+
             &--top {
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 margin: 0 0 6px 0;
+
+                .rating {
+                    margin-right: 18px;
+                    margin-left: 20px;
+                }
             }
 
             .btn {
-            	margin-left: auto;
-            	margin-top: 8px;
+                margin-left: auto;
+                margin-top: 8px;
             }
 
             label {
@@ -453,21 +488,23 @@
 
             input,
             textarea {
-            	outline: none;
-            	font-family: Open Sans;
-             	font-size: 14px;
+                outline: none;
+                font-family: Open Sans;
+                font-size: 14px;
                 border: solid 1px #9fa3a7;
             }
         }
 
         &__list {
-        	margin-top: 16px;
+            margin-top: 16px;
+
             &__item {
-            	background: #f2f2f2;
-            	padding: 36px 47px 33px;
-            	margin-bottom: 16px;
-            	border-radius: 8px;
-            	position: relative;
+                background: #f2f2f2;
+                padding: 36px 47px 33px;
+                margin-bottom: 16px;
+                border-radius: 8px;
+                position: relative;
+
                 &--name {
                     font-family: Montserrat;
                     font-size: 16px;
@@ -476,16 +513,17 @@
                 }
 
                 &--rating {
-                	display: flex;
-                	font-family: Montserrat;
-                	position: absolute;
-                	right: 24px;
-                	top: 41px;
-                	font-size: 12px;
-                	line-height: 1.0em;
-                	.rating {
-                		margin-left: 5px;
-                	}
+                    display: flex;
+                    font-family: Montserrat;
+                    position: absolute;
+                    right: 24px;
+                    top: 41px;
+                    font-size: 12px;
+                    line-height: 1.0em;
+
+                    .rating {
+                        margin-left: 5px;
+                    }
                 }
 
                 &--date {
@@ -496,7 +534,7 @@
                 }
 
                 &--text {
-                	margin-top: 25px;
+                    margin-top: 25px;
                     font-family: Open Sans;
                     font-size: 12px;
                     line-height: 1.5;
@@ -506,14 +544,32 @@
         }
 
         &--more {
-        	font-family: Montserrat;
-        	font-size: 14px;
-        	font-weight: 600;
-        	line-height: 1.14;
-        	letter-spacing: 2.8px;
-        	text-align: right;
-        	color: #66c473;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.14;
+            letter-spacing: 2.8px;
+            text-align: right;
+            color: #66c473;
+            cursor: pointer;
+            position: relative;
+            margin-right: 18px;
 
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:after {
+                content: '';
+                border: solid #66c473;
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 3px;
+                position: relative;
+                top: -1px;
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+            }
         }
     }
 
