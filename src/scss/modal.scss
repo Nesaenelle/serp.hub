@@ -34,10 +34,14 @@
 
     &--close {
         position: absolute;
-        right: -20px;
-        top: -25px;
+        right: -23px;
+        top: -30px;
         font-size: 19px;
         cursor: pointer;
+        background: url(../img/close.svg);
+        width: 24px;
+        height: 24px;
+        background-size: cover;
 
         svg {
             width: 14px;

@@ -1,0 +1,520 @@
+.offers-page {
+    padding-top: 95px;
+
+    .bottom-form {
+    	margin-top: 80px;
+    }
+
+    .title {
+
+        &.offer-title {
+            margin-top: 50px;
+        }
+    }
+
+    .container {
+        padding-right: 160px;
+    }
+
+    .inner-container {
+        width: 83%;
+    }
+
+    .lSSlideOuter {
+        width: 100%;
+        margin-top: 17px;
+
+        .lslide {
+            height: 490px;
+
+            img {
+                object-fit: cover;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .lSAction {
+            // position: relative;
+            // z-index: 1000;
+            display: none;
+        }
+
+        // .lSAction > a {
+        // 	top: auto;
+        // 	bottom: -80px;
+        // 	background: #fcc!important;
+        // 	z-index: 23;
+        // }
+        .lSPager.lSGallery {
+            margin-top: 12px !important;
+
+            li {
+                height: 105px;
+
+                img {
+                    object-fit: cover;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .video {
+        margin-top: 46px;
+        // width: 83%;
+        height: 520px;
+        width: 100%;
+
+        iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .main-descr {
+        display: flex;
+        justify-content: space-between;
+
+        &+.main-descr {
+            margin-top: 27px;
+        }
+
+        &__descr {
+            font-family: Open Sans;
+            font-size: 14px;
+            color: #4a4a4a;
+            width: 926px;
+            margin-top: 10px;
+
+            &+.main-descr__descr {
+                margin-top: 15px;
+            }
+        }
+
+
+        &--left {
+
+            h1 {
+                margin-top: 34px;
+            }
+
+            .ye-line {
+                margin-top: 10px;
+                width: 405px;
+                height: 4px;
+                background-color: #ffcc2e;
+            }
+
+            .net {
+                margin-top: 6px;
+                font-family: Montserrat;
+                font-size: 14px;
+                color: #292929;
+            }
+        }
+
+        &--right {
+            width: 385px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+        }
+
+        &__price {
+            width: 544px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            padding-top: 15px;
+            // justify-content: flex-end;
+            height: 126px;
+            min-width: 208px;
+
+            a {
+                margin-left: 14px;
+            }
+
+            .price {
+                margin-left: 62px;
+
+                &+div {
+                    position: absolute;
+                    right: -11px;
+                    top: 12px;
+                }
+            }
+        }
+    }
+
+
+
+    .price-tag {
+
+        height: 416px;
+        border-radius: 8px;
+        background-color: #ffcc2e;
+        padding: 45px 30px;
+        margin-top: 12px;
+
+        &__wrap {
+            margin-top: 2px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+
+            .price-tag__big-title {
+                margin-right: 14px;
+            }
+
+            .price-tag__old-price-text {
+                position: relative;
+                top: 4px;
+            }
+
+            &+.price-tag__black-line {
+                margin: 5px auto 10px;
+            }
+        }
+
+
+        &__old-price {
+            font-family: Montserrat;
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        &__old-price-text {
+            font-family: Montserrat;
+            font-size: 10px;
+            color: #ffffff;
+
+        }
+
+        &__title {
+            font-family: Montserrat;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #292929;
+            text-align: center;
+        }
+
+        &__sm-title {
+            font-family: Open Sans;
+            font-size: 12px;
+            color: #292929;
+            text-align: center;
+            margin-top: 14px;
+        }
+
+        &__big-title {
+            font-family: Montserrat;
+            font-size: 40px;
+            font-weight: 600;
+            color: #292929;
+            text-align: center;
+        }
+
+        &__black-line {
+            width: 716px;
+            height: 1px;
+            background-color: #292929;
+            margin: 10px auto;
+        }
+
+        ul {
+            width: 52%;
+            margin: auto;
+
+
+            li {
+                line-height: 1.5em;
+                font-family: Open Sans;
+                font-size: 14px;
+                color: #292929;
+                margin-top: 2px;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    width: 3px;
+                    height: 3px;
+                    position: absolute;
+                    top: 10px;
+                    bottom: 0;
+                    // margin: auto;
+                    border-radius: 100%;
+                    background: #292929;
+                    display: inline-block;
+                    left: -25px;
+                }
+            }
+        }
+
+        &__btn {
+            border: solid 2px #39b54a;
+            width: 300px;
+            height: 50px;
+            border-radius: 25.5px;
+            background-color: #39b54a;
+            color: #fff;
+            letter-spacing: 1px;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 38px auto 0;
+            display: block;
+
+            &:hover {
+                background: #ffcc2e;
+                color: #000;
+            }
+        }
+
+    }
+
+    .price-tag-small {
+        width: calc(100%/3 - 9px);
+        height: 517px;
+        border-radius: 8px;
+        background-color: #ffcc2e;
+        padding: 60px 36px 40px;
+        margin-top: 15px;
+
+        &--wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__wrap {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin: 11px 0 15px;
+
+            &>div:first-child {
+                position: absolute;
+                left: 13px
+            }
+        }
+
+
+        &__old-price {
+            font-family: Montserrat;
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        &__old-price-text {
+            font-family: Montserrat;
+            font-size: 10px;
+            color: #ffffff;
+
+        }
+
+
+        &__title {
+            font-family: Montserrat;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #292929;
+            text-align: center;
+
+        }
+
+        &__sm-title {
+            font-family: Open Sans;
+            font-size: 12px;
+            color: #292929;
+            text-align: center;
+            margin-top: 23px;
+        }
+
+        &__big-title {
+            font-family: Montserrat;
+            font-size: 40px;
+            font-weight: 600;
+            color: #292929;
+            text-align: center;
+        }
+
+        &__black-line {
+            width: 232px;
+            height: 1px;
+            background-color: #292929;
+            margin: 0px auto 18px;
+        }
+
+        ul {
+            width: 100%;
+            margin: auto;
+
+
+            li {
+                line-height: 1.5em;
+                font-family: Open Sans;
+                font-size: 12px;
+                color: #292929;
+                margin-top: 2px;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    width: 3px;
+                    height: 3px;
+                    position: relative;
+                    top: -3px;
+                    border-radius: 100%;
+                    background: #292929;
+                    display: inline-block;
+                    margin-right: 25px;
+                }
+            }
+        }
+
+
+        &__btn {
+            border: solid 2px #39b54a;
+            width: 100%;
+            height: 64px;
+            border-radius: 25.5px;
+            background-color: #39b54a;
+            color: #fff;
+            letter-spacing: 1px;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 13px auto;
+            display: block;
+
+            &:hover {
+                background: #ffcc2e;
+                color: #000;
+            }
+        }
+
+    }
+
+    .feedback {
+        padding-left: 93px;
+        margin-top: 17px;
+
+        &__form {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            &--top {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0 0 6px 0;
+            }
+
+            .btn {
+            	margin-left: auto;
+            	margin-top: 8px;
+            }
+
+            label {
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 600;
+                color: #292929;
+                margin-right: 10px;
+            }
+
+            input {
+                width: 234px;
+                margin-right: auto;
+                border-radius: 15px;
+                padding: 6px 15px;
+            }
+
+            textarea {
+                width: 100%;
+                border-radius: 6px;
+                height: 115px;
+                resize: none;
+                padding: 20px 20px;
+            }
+
+            input,
+            textarea {
+            	outline: none;
+            	font-family: Open Sans;
+             	font-size: 14px;
+                border: solid 1px #9fa3a7;
+            }
+        }
+
+        &__list {
+        	margin-top: 16px;
+            &__item {
+            	background: #f2f2f2;
+            	padding: 36px 47px 33px;
+            	margin-bottom: 16px;
+            	border-radius: 8px;
+            	position: relative;
+                &--name {
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #292929;
+                }
+
+                &--rating {
+                	display: flex;
+                	font-family: Montserrat;
+                	position: absolute;
+                	right: 24px;
+                	top: 41px;
+                	font-size: 12px;
+                	line-height: 1.0em;
+                	.rating {
+                		margin-left: 5px;
+                	}
+                }
+
+                &--date {
+                    font-family: Montserrat;
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: rgba(41, 41, 41, 0.5);
+                }
+
+                &--text {
+                	margin-top: 25px;
+                    font-family: Open Sans;
+                    font-size: 12px;
+                    line-height: 1.5;
+                    color: #292929;
+                }
+            }
+        }
+
+        &--more {
+        	font-family: Montserrat;
+        	font-size: 14px;
+        	font-weight: 600;
+        	line-height: 1.14;
+        	letter-spacing: 2.8px;
+        	text-align: right;
+        	color: #66c473;
+
+        }
+    }
+
+}

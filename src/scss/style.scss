@@ -7,12 +7,12 @@ $c-green: #39b54a;
 @import "header.scss";
 @import "home-page.scss";
 @import "modal.scss";
-@import "product-page.scss";
+@import "offers-page.scss";
 @import "slick.css";
+@import "lightslider.css";
 
 @import "_styling.scss";
 @import "_funtionality.scss";
-
 
 
 body {}
@@ -138,6 +138,21 @@ h2 {
     img {
         width: 12px;
         margin-right: 4px;
+        cursor: pointer;
+    }
+    input {
+        border: none!important;
+        width: 0!important;
+        height: 0!important;
+        padding: 0!important;
+        &:invalid:not(:empty) {
+            &  + .error {
+                display: block;
+            }
+        }
+    }
+    .error {
+        display: none;
     }
 }
 
