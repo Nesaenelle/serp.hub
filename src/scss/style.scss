@@ -78,6 +78,9 @@ h2 {
     letter-spacing: 5px;
     color: $c-green;
     font-family: Montserrat;
+    @media (max-width: 768px) {
+        letter-spacing: 3px;
+    }
 }
 
 .action-time {
@@ -139,6 +142,7 @@ h2 {
         font-family: Montserrat;
         font-size: 10px;
         color: #d6d6d6;
+        white-space: nowrap;
     }
 
     &__reviews {
@@ -240,6 +244,16 @@ h2 {
 }
 
 .form {
+
+    .text {
+        font-family: Open Sans;
+        font-size: 14px;
+        color: #9fa3a7;
+        @media (max-width: 480px) {
+            font-size: 12px;
+        }
+    }
+
     .input {
         position: relative;
         width: 100%;
@@ -256,6 +270,13 @@ h2 {
             color: rgba(41, 41, 41, 0.5);
             background-color: rgba(216, 216, 216, 0.37);
             font-family: Montserrat;
+            @media (max-width: 768px) {
+                padding: 9px 35px;
+            }
+            @media (max-width: 480px) {
+                height: 45px;
+                padding: 8px 25px;
+            }
 
             &.success {
                 box-shadow: 0 0 0px 1px #39b54a;

@@ -1,5 +1,16 @@
 .auth-page {
     padding-top: 92px;
+    @media (max-width: 1280px) {
+        padding-top: 65px;
+    }
+
+    @media (max-width: 1024px) {
+        padding-top: 30px;
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 10px;
+    }
 
     .container {
         max-width: 897px;
@@ -16,6 +27,10 @@
             margin-right: 40px;
             cursor: pointer;
             color: #9fa3a7;
+
+            @media (max-width: 768px) {
+                margin-right: 25px;
+            }
 
             &.active {
                 color: #39b54a;
@@ -35,11 +50,8 @@
         }
 
         .text {
-            font-family: Open Sans;
-            font-size: 14px;
             color: #292929;
             padding-left: 40px;
-            margin-top: 12px;
         }
 
         label {
@@ -49,13 +61,23 @@
             font-weight: 600;
             color: #4a4a4a;
             display: block;
+            @media (max-width: 480px) {
+                padding-left: 20px;
+            }
         }
 
         .btn {
             width: 196px;
+            @media (max-width: 480px) {
+                height: 42px;
+                margin: 20px auto 20px;
+            }
         }
 
         .input {
+            & + .text {
+                margin-top: 3px;
+            }
             &+label {
                 margin-top: 13px;
             }
@@ -74,6 +96,10 @@
             margin-left: auto;
             margin-right: 15px;
             cursor: pointer;
+            @media (max-width: 480px) {
+                width: 100%;
+                text-align: center;
+            }
         }
 
         .extra-text {
@@ -84,6 +110,10 @@
             color: #9b9b9b;
             align-self: center;
             text-align: right;
+            @media (max-width: 480px) {
+                width: 100%;
+                text-align: center;
+            }
         }
 
         &--bottom {
@@ -91,6 +121,9 @@
             margin-top: 25px;
             display: flex;
             align-items: center;
+            @media (max-width: 480px) {
+                flex-wrap: wrap;
+            }
         }
     }
 }

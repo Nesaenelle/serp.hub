@@ -70,18 +70,27 @@ $('.form').on('submit', (e) => {
 });
 
 $('.form').on('input', function(e) {
-    checkValidity(e.target);
+    // checkValidity(e.target);
+    var controls = [...$(e.target).closest('form')[0].elements].filter(r => r.localName === 'input');
+    controls.forEach(c=> {
+        checkValidity(c);
+    });
+    var targetInput = controls.filter(r=> !r.classList.contains('success') || r.classList.contains('error'))[0];
+    
+    if(targetInput) {
+        $('.payment__step').eq(1).removeClass('active');
+    } else {
+        $('.payment__step').eq(1).addClass('active');
+    }
 });
 
 function checkValidity(el) {
     if (el.checkValidity()) {
         $(el).addClass('success');
         $(el).removeClass('error');
-        $('.payment__step').eq(1).addClass('active');
     } else {
         $(el).addClass('error');
         $(el).removeClass('success');
-        $('.payment__step').eq(1).removeClass('active');
     }
 }
 
