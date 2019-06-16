@@ -6,6 +6,7 @@ block content
 		.top-block
 			.main_pandas
 				h2 FEATURED OFFER
+				img.right-img.mobile(src='img/telephone.jpg' alt='')
 				include ../parts/timer.pug
 				h1 SOCIAL PANDAS
 				.main_pandas__discription  Social Pandas is the MOST popular service for a reason, clients continue to see INSANE results with their Social Media goals.
@@ -19,7 +20,7 @@ block content
 						a(href="offers.html#feedback" class="old-price__reviews") 999 reviews
 				a(href="offers.html")
 					button.btn.btn--green Learn More
-			img.right-img(src='img/telephone.jpg' alt='')
+			img.right-img.desktop(src='img/telephone.jpg' alt='')
 	.slider__bg
 		.container
 			.slider__title RECOMENDED SERVICES
@@ -30,6 +31,8 @@ block content
 					each val in [1,2,3,4,5]
 						label.slider__item(for="slide-"+ val class="slider__item--" + val)
 							+pandas-list-item(val)
+				.prev-arrow
+				.next-arrow
 	.container
 		h2.current-offers-title CURRENT OFFERS
 		.panel

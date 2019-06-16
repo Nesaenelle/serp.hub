@@ -178,12 +178,33 @@ var slider = $('#imageGallery').lightSlider({
     }
 });
 
+
+//HOME SLIDER
+
 $('.prev-arrow').on('click', () => {
-    slider.goToPrevSlide();
+    // slider.goToPrevSlide();
+    var $radios = $('.main-slider').find('input[type="radio"]');
+    var $checked = $radios.filter(':checked');
+    
+    var index = $checked.index();
+    index--;
+    if(index < 0) {
+        index = $radios.length - 1;
+    }
+    $radios.eq(index).prop('checked', true);
 });
 
 $('.next-arrow').on('click', () => {
-    slider.goToNextSlide();
+    // slider.goToNextSlide();
+    var $radios = $('.main-slider').find('input[type="radio"]');
+    var $checked = $radios.filter(':checked');
+    
+    var index = $checked.index();
+    index++;
+    if(index >= $radios.length) {
+        index = 0;
+    }
+    $radios.eq(index).prop('checked', true);
 });
 
 

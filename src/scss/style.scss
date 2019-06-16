@@ -34,6 +34,10 @@ body {}
     @media (max-width: 768px) {
         padding: 0 20px;
     }
+
+    @media (max-width: 480px) {
+        padding: 0 10px;
+    }
 }
 
 
@@ -60,6 +64,13 @@ h1 {
     color: #292929;
     font-size: 36px;
     font-family: Montserrat;
+    @media (max-width: 980px) {
+        font-size: 32px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
 }
 
 h2 {
@@ -336,6 +347,10 @@ h2 {
     padding: 115px 0 124px 0;
     margin-top: 30px;
 
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+
     .container {
         max-width: 1100px;
     }
@@ -344,6 +359,12 @@ h2 {
         font-family: Montserrat;
         font-size: 36px;
         font-weight: 700;
+        @media (max-width: 980px) {
+            font-size: 32px;
+        }
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
     }
 
     &--descr {
@@ -351,6 +372,9 @@ h2 {
         font-size: 14px;
         margin-top: 17px;
         width: 50%;
+        @media (max-width: 480px) {
+            width: 100%;
+        }
     }
 
     form {
@@ -359,6 +383,13 @@ h2 {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        @media (max-width: 480px) {
+            flex-wrap: wrap;
+        }
 
         input {
             width: 100%;
@@ -393,6 +424,9 @@ h2 {
         .btn {
             min-width: 169px;
             margin-left: 15px;
+            @media (max-width: 480px) {
+                margin: 20px auto 0;
+            }
         }
     }
 }
