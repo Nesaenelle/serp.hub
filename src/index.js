@@ -16,6 +16,12 @@ $('[data-dropdown-item]').on('click', function(e) {
     $(this).closest('[data-dropdown]').removeClass('active');
 });
 
+$('.burger').on('click', function(e) {
+    e.stopPropagation()
+    $(this).toggleClass('opened')
+    $('.dropdown-menu').toggleClass('opened')
+});
+
 $(window).on('click', function(e) {
     if ($('[data-dropdown]').length && !$('[data-dropdown]')[0].contains(e.target)) {
         $('[data-dropdown]').removeClass('active');
@@ -26,6 +32,10 @@ $(window).on('click', function(e) {
         $('.modal--overlay').removeClass('active');
     }
 
+    if ($('.burger').length && !$('.dropdown-menu')[0].contains(e.target)) {
+        $('.burger').removeClass('opened')
+        $('.dropdown-menu').removeClass('opened')
+    }
 });
 
 
