@@ -160,7 +160,7 @@ var slider = $('#imageGallery').lightSlider({
                 item: 1,
                 slideMove: 1,
                 slideMargin: 6,
-                thumbItem: 2
+                thumbItem: 3
             }
         },
         {
@@ -169,7 +169,7 @@ var slider = $('#imageGallery').lightSlider({
                 item: 1,
                 slideMove: 1,
                 slideMargin: 6,
-                thumbItem: 1
+                thumbItem: 2
             }
         },
     ],
