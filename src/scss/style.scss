@@ -90,7 +90,7 @@ h2 {
     font-family: BebasNeue;
     // font-size: 12px;
     display: flex;
-    // align-items: center;
+    align-items: center;
     font-family: 'Bebas Neue';
     width: 176px;
     color: $c-green;
@@ -105,14 +105,14 @@ h2 {
         font-size: 17px;
         margin-right: 2px;
         font-weight: 400;
-        padding-top: 2px;
+        // padding-top: 2px;
     }
 
     span {
         font-size: 10px;
         margin-right: 6px;
-        align-self: flex-end;
-        padding-bottom: 4px;
+        // align-self: flex-end;
+        // padding-bottom: 4px;
         letter-spacing: 0.4px;
     }
 }
