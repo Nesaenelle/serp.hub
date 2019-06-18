@@ -236,3 +236,59 @@ $('.tabs--item').on('click', function() {
     $(`.form`).hide();
     $(`.form[data-tab=${id}]`).show();
 });
+
+
+var interval;
+function startTimer(duration, fn) {
+    var timer = duration, days, hours, minutes, seconds;
+    var time = getTime(timer);
+
+    days = time.days;
+    hours = time.hours;
+    minutes = time.minutes;
+    seconds = time.seconds;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    fn(days, hours, minutes, seconds);
+
+    interval = setInterval(function () {
+        var time = getTime(timer);
+        days = time.days;
+        hours = time.hours;
+        minutes = time.minutes;
+        seconds = time.seconds;
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        // display.textContent = minutes + ":" + seconds;
+        fn(days, hours, minutes, seconds);
+        if (--timer < 0) {
+            // timer = duration;
+            //disable
+            clearInterval(interval);
+            $('.btn--learn-more').attr('disabled', true);
+            $('.pandas-list__item').addClass('disabled');
+        }
+    }, 1000);
+}
+
+function getTime(timer) {
+    return {
+        days: parseInt(timer / (60 * 60 * 24), 10),
+        hours: Math.floor(timer / 60 / 60) % 24,
+        minutes: Math.floor((timer / 60) % 60),
+        seconds: parseInt(timer % 60, 10)
+    }
+}
+
+let fiveMinutes = (60 * 60 * 24) * 5; //5 days
+
+  startTimer(fiveMinutes, (dd, hh, mm, ss)=> {
+
+      $('.action-time').each((i, item)=> {
+          $(item).find('.action-time--days b').text(dd);
+          $(item).find('.action-time--hours b').text(hh);
+          $(item).find('.action-time--minutes b').text(mm);
+      });
+  });

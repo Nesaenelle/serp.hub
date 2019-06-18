@@ -459,14 +459,13 @@
                 width: 100%;
             }
 
-            &:hover {
-
+            &:hover:not(.disabled) {
 
                 .btn--transparent {
                     background: $c-green;
                     color: #fff;
 
-                    &:hover {
+                    &:hover:enabled {
                         background: transparent;
                         color: #000;
                     }

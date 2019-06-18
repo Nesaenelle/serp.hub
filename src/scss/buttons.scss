@@ -15,7 +15,7 @@
         font-size: 12px;
         font-weight: bold;
 
-        &:hover {
+        &:hover:enabled {
             background: #39b54a;
             color: #fff;
         }
@@ -33,7 +33,7 @@
         font-size: 12px;
         font-weight: bold;
 
-        &:hover {
+        &:hover:enabled {
             background: #fff;
             color: #000;
         }
@@ -43,7 +43,7 @@
         background-color: transparent;
         // color: #39b54a;
         color: #000;
-        &:hover {
+        &:hover:enabled {
             background-color: #39b54a;
             color: #fff;
         }
@@ -52,5 +52,10 @@
 
     &:active {
         transform: translateY(1px);
+    }
+
+    &:disabled {
+        cursor: auto;
+        opacity: 0.5;
     }
 }

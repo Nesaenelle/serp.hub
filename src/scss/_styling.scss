@@ -63,6 +63,10 @@
     @media (max-width: 600px) {
       // margin-top: 60px;
     }
+
+    @media (max-width: 480px) {
+      max-width: 270px;
+    }
   }
 
   // .slider__item
