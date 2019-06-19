@@ -3,7 +3,8 @@ import $ from 'jquery';
 window.$ = window.jQuery = $;
 import 'slick-carousel';
 import './lightslider';
-
+import moment from 'moment';
+const _moment = moment(); 
 
 $('[data-dropdown-value]').on('click', function(e) {
     e.stopPropagation();
@@ -240,53 +241,35 @@ $('.tabs--item').on('click', function() {
 
 var interval;
 function startTimer(duration, fn) {
-    var timer = duration, days, hours, minutes, seconds;
-    var time = getTime(timer);
-
-    days = time.days;
-    hours = time.hours;
-    minutes = time.minutes;
-    seconds = time.seconds;
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-    fn(days, hours, minutes, seconds);
+    var dur = moment.duration(duration);
+    fn(dur);
 
     interval = setInterval(function () {
-        var time = getTime(timer);
-        days = time.days;
-        hours = time.hours;
-        minutes = time.minutes;
-        seconds = time.seconds;
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        // display.textContent = minutes + ":" + seconds;
-        fn(days, hours, minutes, seconds);
-        if (--timer < 0) {
-            // timer = duration;
-            //disable
+        var dur = moment.duration(duration);
+        fn(dur);
+        if (duration < 0) {
             clearInterval(interval);
             $('.btn--learn-more').attr('disabled', true);
             $('.pandas-list__item').addClass('disabled');
+        } else {
+            duration = moment.duration(duration - 1000)._milliseconds;
         }
     }, 1000);
 }
 
-function getTime(timer) {
-    return {
-        days: parseInt(timer / (60 * 60 * 24), 10),
-        hours: Math.floor(timer / 60 / 60) % 24,
-        minutes: Math.floor((timer / 60) % 60),
-        seconds: parseInt(timer % 60, 10)
-    }
-}
+const date1 = moment('6/21/2019');
+const date2 = moment(new Date());
+var duration = moment.duration(date1.diff(date2));
 
-let fiveMinutes = (60 * 60 * 24) * 5; //5 days
-
-  startTimer(fiveMinutes, (dd, hh, mm, ss)=> {
+  startTimer(duration._milliseconds, (duration)=> {
 
       $('.action-time').each((i, item)=> {
+          var hh = duration.hours();
+          hh = hh < 10 ? ("0" + hh) : hh;
+          var mm = duration.minutes();
+          mm = mm < 10 ? ("0" + mm) : mm;
+          var dd = duration.days();
+          dd = dd < 10 ? ("0" + dd) : dd;
           $(item).find('.action-time--days b').text(dd);
           $(item).find('.action-time--hours b').text(hh);
           $(item).find('.action-time--minutes b').text(mm);
