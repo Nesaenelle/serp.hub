@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "dependencies": {
-    "acorn": "^6.1.1",
+    "acorn": "^6.4.1",
     "lightgallery": "^1.6.12",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
